@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="wraper_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="wraper_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="755.312016666 ms"></ZoomStartTime>
+      <ZoomEndTime time="828.707116667 ms"></ZoomEndTime>
+      <Cursor1Time time="816.474600000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="142"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/PWM_0/U0/signalPWM" type="logic">
+      <obj_property name="ElementShortName">signalPWM</obj_property>
+      <obj_property name="ObjectShortName">signalPWM</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider1458">
+      <obj_property name="label">ROM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/p1" type="logic">
+      <obj_property name="ElementShortName">p1</obj_property>
+      <obj_property name="ObjectShortName">p1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/p2" type="logic">
+      <obj_property name="ElementShortName">p2</obj_property>
+      <obj_property name="ObjectShortName">p2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/R0" type="other">
+      <obj_property name="ElementShortName">R0</obj_property>
+      <obj_property name="ObjectShortName">R0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/G0" type="other">
+      <obj_property name="ElementShortName">G0</obj_property>
+      <obj_property name="ObjectShortName">G0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/B0" type="other">
+      <obj_property name="ElementShortName">B0</obj_property>
+      <obj_property name="ObjectShortName">B0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/R1" type="other">
+      <obj_property name="ElementShortName">R1</obj_property>
+      <obj_property name="ObjectShortName">R1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/G1" type="other">
+      <obj_property name="ElementShortName">G1</obj_property>
+      <obj_property name="ObjectShortName">G1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/B1" type="other">
+      <obj_property name="ElementShortName">B1</obj_property>
+      <obj_property name="ObjectShortName">B1</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider1457">
+      <obj_property name="label">modificador</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#00FFFF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/div_50ms_0/U0/senal_salida" type="logic">
+      <obj_property name="ElementShortName">senal_salida</obj_property>
+      <obj_property name="ObjectShortName">senal_salida</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/div_50ms_1/U0/senal_salida" type="logic">
+      <obj_property name="ElementShortName">senal_salida</obj_property>
+      <obj_property name="ObjectShortName">senal_salida</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wraper_tb/wrap/design_1_i/ROM_0/U0/valor_int" type="other">
+      <obj_property name="ElementShortName">valor_int</obj_property>
+      <obj_property name="ObjectShortName">valor_int</obj_property>
+   </wvobject>
+</wave_config>

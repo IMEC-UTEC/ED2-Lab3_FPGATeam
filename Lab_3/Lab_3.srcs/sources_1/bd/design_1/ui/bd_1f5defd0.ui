@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.16066",
+   "Default View_TopLeft":"-168,-1494",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x -70 -y 160 -defaultsOSRD
+preplace port port-id_boton_0 -pg 1 -lvl 0 -x -70 -y -80 -defaultsOSRD
+preplace port port-id_signalPWM_0 -pg 1 -lvl 5 -x 1330 -y 240 -defaultsOSRD
+preplace port port-id_boton_1 -pg 1 -lvl 0 -x -70 -y -20 -defaultsOSRD
+preplace port port-id_sw0_0 -pg 1 -lvl 0 -x -70 -y -150 -defaultsOSRD
+preplace port port-id_sw1_0 -pg 1 -lvl 0 -x -70 -y -130 -defaultsOSRD
+preplace port port-id_sw2_0 -pg 1 -lvl 0 -x -70 -y -110 -defaultsOSRD
+preplace inst PWM_0 -pg 1 -lvl 4 -x 1100 -y 240 -defaultsOSRD
+preplace inst controlador_0 -pg 1 -lvl 3 -x 710 -y -80 -defaultsOSRD
+preplace inst decodificador_0 -pg 1 -lvl 3 -x 710 -y 70 -defaultsOSRD
+preplace inst div_0 -pg 1 -lvl 1 -x 110 -y 170 -defaultsOSRD
+preplace inst div_4_0 -pg 1 -lvl 2 -x 390 -y 90 -defaultsOSRD
+preplace inst debouncer_0 -pg 1 -lvl 1 -x 110 -y -100 -defaultsOSRD
+preplace inst debouncer_1 -pg 1 -lvl 1 -x 110 -y 20 -defaultsOSRD
+preplace inst ROM_0 -pg 1 -lvl 4 -x 1100 -y -100 -defaultsOSRD
+preplace netloc div_0_div3_3M 1 1 3 230 230 N 230 N
+preplace netloc clk_0_1 1 0 1 -20 -110n
+preplace netloc PWM_0_signalPWM 1 4 1 N 240
+preplace netloc decodificador_0_ancho 1 3 1 870 70n
+preplace netloc div_4_0_clkdiv_4 1 2 2 500 0 880
+preplace netloc ROM_0_data 1 2 3 510 -220 NJ -220 1230
+preplace netloc sw0_0_1 1 0 4 -50J -200 NJ -200 NJ -200 890J
+preplace netloc sw1_0_1 1 0 4 -40J -180 NJ -180 NJ -180 880J
+preplace netloc sw2_0_1 1 0 4 -30J -170 NJ -170 NJ -170 860J
+preplace netloc controlador_0_reset 1 2 2 520 140 840
+preplace netloc controlador_0_dataBit 1 2 2 520 -160 840
+preplace netloc controlador_0_direccion 1 3 1 850 -160n
+preplace netloc debouncer_0_senal_salida 1 1 3 230 -190 NJ -190 870J
+preplace netloc debouncer_1_senal_salida 1 1 3 N 20 490J 150 890J
+preplace netloc boton_0_1 1 0 1 -10 -90n
+preplace netloc boton_1_1 1 0 1 -40 -20n
+levelinfo -pg 1 -70 110 390 710 1100 1330
+pagesize -pg 1 -db -bbox -sgen -170 -530 1470 340
+"
+}
+0

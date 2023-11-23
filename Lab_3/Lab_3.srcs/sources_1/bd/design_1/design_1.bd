@@ -1,0 +1,410 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1D420DE7BA641899",
+      "device": "xc7s15ftgb196-1",
+      "gen_directory": "../../../../Lab_3.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "PWM_0": "",
+      "controlador_0": "",
+      "decodificador_0": "",
+      "div_0": "",
+      "div_4_0": "",
+      "debouncer_0": "",
+      "debouncer_1": "",
+      "ROM_0": ""
+    },
+    "ports": {
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "boton_0": {
+        "direction": "I"
+      },
+      "signalPWM_0": {
+        "direction": "O"
+      },
+      "boton_1": {
+        "direction": "I"
+      },
+      "sw0_0": {
+        "direction": "I"
+      },
+      "sw1_0": {
+        "direction": "I"
+      },
+      "sw2_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "PWM_0": {
+        "vlnv": "xilinx.com:module_ref:PWM:1.0",
+        "xci_name": "design_1_PWM_0_0",
+        "xci_path": "ip\\design_1_PWM_0_0\\design_1_PWM_0_0.xci",
+        "inst_hier_path": "PWM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "signalPWM": {
+            "direction": "O"
+          },
+          "ancho": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "controlador_0": {
+        "vlnv": "xilinx.com:module_ref:controlador:1.0",
+        "xci_name": "design_1_controlador_0_0",
+        "xci_path": "ip\\design_1_controlador_0_0\\design_1_controlador_0_0.xci",
+        "inst_hier_path": "controlador_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controlador",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
+          },
+          "color": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "dataBit": {
+            "direction": "O"
+          },
+          "direccion": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "O"
+          }
+        }
+      },
+      "decodificador_0": {
+        "vlnv": "xilinx.com:module_ref:decodificador:1.0",
+        "xci_name": "design_1_decodificador_0_0",
+        "xci_path": "ip\\design_1_decodificador_0_0\\design_1_decodificador_0_0.xci",
+        "inst_hier_path": "decodificador_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "decodificador",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "dataBit": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ancho": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "div_0": {
+        "vlnv": "xilinx.com:module_ref:div:1.0",
+        "xci_name": "design_1_div_0_0",
+        "xci_path": "ip\\design_1_div_0_0\\design_1_div_0_0.xci",
+        "inst_hier_path": "div_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "div3_3M": {
+            "direction": "O"
+          }
+        }
+      },
+      "div_4_0": {
+        "vlnv": "xilinx.com:module_ref:div_4:1.0",
+        "xci_name": "design_1_div_4_0_0",
+        "xci_path": "ip\\design_1_div_4_0_0\\design_1_div_4_0_0.xci",
+        "inst_hier_path": "div_4_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "div_4",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "clkdiv_4": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "xci_name": "design_1_debouncer_0_0",
+        "xci_path": "ip\\design_1_debouncer_0_0\\design_1_debouncer_0_0.xci",
+        "inst_hier_path": "debouncer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "boton": {
+            "direction": "I"
+          },
+          "senal_salida": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_1": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "xci_name": "design_1_debouncer_1_0",
+        "xci_path": "ip\\design_1_debouncer_1_0\\design_1_debouncer_1_0.xci",
+        "inst_hier_path": "debouncer_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "boton": {
+            "direction": "I"
+          },
+          "senal_salida": {
+            "direction": "O"
+          }
+        }
+      },
+      "ROM_0": {
+        "vlnv": "xilinx.com:module_ref:ROM:1.0",
+        "xci_name": "design_1_ROM_0_0",
+        "xci_path": "ip\\design_1_ROM_0_0\\design_1_ROM_0_0.xci",
+        "inst_hier_path": "ROM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ROM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "add": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "sw0": {
+            "direction": "I"
+          },
+          "sw1": {
+            "direction": "I"
+          },
+          "sw2": {
+            "direction": "I"
+          },
+          "CLK": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "p1": {
+            "direction": "I"
+          },
+          "p2": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "PWM_0_signalPWM": {
+        "ports": [
+          "PWM_0/signalPWM",
+          "signalPWM_0"
+        ]
+      },
+      "ROM_0_data": {
+        "ports": [
+          "ROM_0/data",
+          "controlador_0/color"
+        ]
+      },
+      "boton_0_1": {
+        "ports": [
+          "boton_0",
+          "debouncer_0/boton"
+        ]
+      },
+      "boton_1_1": {
+        "ports": [
+          "boton_1",
+          "debouncer_1/boton"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "div_0/clk",
+          "debouncer_0/clk",
+          "debouncer_1/clk"
+        ]
+      },
+      "controlador_0_dataBit": {
+        "ports": [
+          "controlador_0/dataBit",
+          "decodificador_0/dataBit"
+        ]
+      },
+      "controlador_0_direccion": {
+        "ports": [
+          "controlador_0/direccion",
+          "ROM_0/add"
+        ]
+      },
+      "controlador_0_reset": {
+        "ports": [
+          "controlador_0/reset",
+          "decodificador_0/reset"
+        ]
+      },
+      "debouncer_0_senal_salida": {
+        "ports": [
+          "debouncer_0/senal_salida",
+          "ROM_0/p1"
+        ]
+      },
+      "debouncer_1_senal_salida": {
+        "ports": [
+          "debouncer_1/senal_salida",
+          "ROM_0/p2"
+        ]
+      },
+      "decodificador_0_ancho": {
+        "ports": [
+          "decodificador_0/ancho",
+          "PWM_0/ancho"
+        ]
+      },
+      "div_0_div3_3M": {
+        "ports": [
+          "div_0/div3_3M",
+          "div_4_0/clk",
+          "PWM_0/clk"
+        ]
+      },
+      "div_4_0_clkdiv_4": {
+        "ports": [
+          "div_4_0/clkdiv_4",
+          "controlador_0/clk",
+          "ROM_0/CLK"
+        ]
+      },
+      "sw0_0_1": {
+        "ports": [
+          "sw0_0",
+          "ROM_0/sw0"
+        ]
+      },
+      "sw1_0_1": {
+        "ports": [
+          "sw1_0",
+          "ROM_0/sw1"
+        ]
+      },
+      "sw2_0_1": {
+        "ports": [
+          "sw2_0",
+          "ROM_0/sw2"
+        ]
+      }
+    }
+  }
+}

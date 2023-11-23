@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 22 21:42:49 2023" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="spartan7" DEVICE="7s15" NAME="design_1" PACKAGE="ftgb196" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_0" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="div_0" PORT="clk"/>
+        <CONNECTION INSTANCE="debouncer_0" PORT="clk"/>
+        <CONNECTION INSTANCE="debouncer_1" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="boton_0" SIGIS="undef" SIGNAME="External_Ports_boton_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_0" PORT="boton"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="signalPWM_0" SIGIS="undef" SIGNAME="PWM_0_signalPWM">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PWM_0" PORT="signalPWM"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="boton_1" SIGIS="undef" SIGNAME="External_Ports_boton_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="debouncer_1" PORT="boton"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sw0_0" SIGIS="undef" SIGNAME="External_Ports_sw0_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ROM_0" PORT="sw0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sw1_0" SIGIS="undef" SIGNAME="External_Ports_sw1_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ROM_0" PORT="sw1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sw2_0" SIGIS="undef" SIGNAME="External_Ports_sw2_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ROM_0" PORT="sw2"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/PWM_0" HWVERSION="1.0" INSTANCE="PWM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PWM" VLNV="xilinx.com:module_ref:PWM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_PWM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="div_0_div3_3M">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="div_0" PORT="div3_3M"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="signalPWM" SIGIS="undef" SIGNAME="PWM_0_signalPWM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="signalPWM_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ancho" RIGHT="0" SIGIS="undef" SIGNAME="decodificador_0_ancho">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodificador_0" PORT="ancho"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ROM_0" HWVERSION="1.0" INSTANCE="ROM_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ROM" VLNV="xilinx.com:module_ref:ROM:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_ROM_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="add" RIGHT="0" SIGIS="undef" SIGNAME="controlador_0_direccion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controlador_0" PORT="direccion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="ROM_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controlador_0" PORT="color"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw0" SIGIS="undef" SIGNAME="External_Ports_sw0_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw0_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw1" SIGIS="undef" SIGNAME="External_Ports_sw1_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw1_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sw2" SIGIS="undef" SIGNAME="External_Ports_sw2_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="sw2_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="div_4_0_clkdiv_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="div_4_0" PORT="clkdiv_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="p1" SIGIS="undef" SIGNAME="debouncer_0_senal_salida">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_0" PORT="senal_salida"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="p2" SIGIS="undef" SIGNAME="debouncer_1_senal_salida">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="debouncer_1" PORT="senal_salida"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/controlador_0" HWVERSION="1.0" INSTANCE="controlador_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="controlador" VLNV="xilinx.com:module_ref:controlador:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_controlador_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="div_4_0_clkdiv_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="div_4_0" PORT="clkdiv_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="color" RIGHT="0" SIGIS="undef" SIGNAME="ROM_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ROM_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dataBit" SIGIS="undef" SIGNAME="controlador_0_dataBit">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodificador_0" PORT="dataBit"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="direccion" RIGHT="0" SIGIS="undef" SIGNAME="controlador_0_direccion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ROM_0" PORT="add"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="controlador_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decodificador_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/debouncer_0" HWVERSION="1.0" INSTANCE="debouncer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:module_ref:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debouncer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="boton" SIGIS="undef" SIGNAME="External_Ports_boton_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="boton_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="senal_salida" SIGIS="undef" SIGNAME="debouncer_0_senal_salida">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ROM_0" PORT="p1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/debouncer_1" HWVERSION="1.0" INSTANCE="debouncer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="debouncer" VLNV="xilinx.com:module_ref:debouncer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_debouncer_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="boton" SIGIS="undef" SIGNAME="External_Ports_boton_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="boton_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="senal_salida" SIGIS="undef" SIGNAME="debouncer_1_senal_salida">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ROM_0" PORT="p2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/decodificador_0" HWVERSION="1.0" INSTANCE="decodificador_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decodificador" VLNV="xilinx.com:module_ref:decodificador:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_decodificador_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="dataBit" SIGIS="undef" SIGNAME="controlador_0_dataBit">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controlador_0" PORT="dataBit"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="controlador_0_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controlador_0" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ancho" RIGHT="0" SIGIS="undef" SIGNAME="decodificador_0_ancho">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PWM_0" PORT="ancho"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/div_0" HWVERSION="1.0" INSTANCE="div_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="div" VLNV="xilinx.com:module_ref:div:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_div_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="div3_3M" SIGIS="undef" SIGNAME="div_0_div3_3M">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="div_4_0" PORT="clk"/>
+            <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/div_4_0" HWVERSION="1.0" INSTANCE="div_4_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="div_4" VLNV="xilinx.com:module_ref:div_4:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_div_4_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="div_0_div3_3M">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="div_0" PORT="div3_3M"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clkdiv_4" SIGIS="undef" SIGNAME="div_4_0_clkdiv_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controlador_0" PORT="clk"/>
+            <CONNECTION INSTANCE="ROM_0" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
